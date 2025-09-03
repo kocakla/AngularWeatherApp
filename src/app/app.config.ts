@@ -1,12 +1,13 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter } from '@angular/router'; // Import provideRouter
+import { routes } from './app.routes'; // Import routes
 
-import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
+  // Add router provider
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes)
+    provideBrowserGlobalErrorListeners(), // Global error handling
+    provideZoneChangeDetection({ eventCoalescing: true }), // Optimize change detection
+    provideRouter(routes) // Provide the router with the app routes
   ]
 };

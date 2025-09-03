@@ -1,0 +1,17 @@
+.search-box {
+  margin-bottom: 20px; // bottom margin
+}
+
+.forecast-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; // wrap on small screens
+}
+
+.forecast-day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+<div *ngIf="loading">Loading current weather...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="currentWeather">
+  <h2>Current Weather in {{ currentWeather.location }}, {{ currentWeather.country }}</h2>
+  <img [src]="currentWeather.conditionIcon" alt="{{ currentWeather.condition }}" />
+  <p>Temp: {{ currentWeather.temperatureC }} °C</p>
+  <p>Condition: {{ currentWeather.condition }}</p>
+  <p>Wind: {{ currentWeather.windKph }} kph</p>
+  <p>Humidity: {{ currentWeather.humidity }}%</p>
+  <p>Feels like: {{ currentWeather.feelsLikeC }} °C</p>
+</div>
+

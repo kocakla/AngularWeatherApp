@@ -1,0 +1,22 @@
+<div class="weather-dashboard">
+  <!-- Search box -->
+   <h1>Weather-App</h1>
+  <div class="search-box">
+    <input 
+      type="text" 
+      placeholder="Enter location (city or zip)"
+      [(ngModel)]="locationInput"
+      class="search-input"
+    />
+
+    <button (click)="search()" class="search-button">
+      Search
+    </button>
+  </div>
+
+  <!-- Child Components-->
+  <div *ngIf="searchLocation">
+    <app-weather [location]="searchLocation"></app-weather>
+    <app-forecast [location]="searchLocation"></app-forecast>
+  </div>
+</div>
